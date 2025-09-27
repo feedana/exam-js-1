@@ -1,0 +1,166 @@
+----------------------------------------------
+Question 1
+
+Data types. haqda  danışmaq 
+a.primitive , non primitive
+b.value, reference 
+
+Data types---
+1.string
+2.number
+3.boolean-true/false
+4.null
+5.undefined
+6.objects
+ ilk 5 i primitive tiplerdir.
+ objects daha cox melumati ozunde saxlayir.
+
+ object, array ve functions non primitive tiplerdir.
+
+ b. value tipler- primitiv tipler hem de value tiplerdir cunki onlar birbasa deyer yadda saxlayir.
+  her hansisa bir deyisiklik diger deyisene tesir etmir.
+
+  reference type olanlar ise obyekt esaslidir ve yaddasda obyektin referansi saxlanir ,
+  ve deyisikler bu reference esasinda hemin obyektin ozune olur. obyektlerde detisiklik digerine tesir edir.
+
+
+
+----------------------------------------------
+Question 2
+  value və reference type-lar yaddaşda saxlanmağına görə necə işləyir?. 
+  heap və stack mövzusunu izah edin
+
+  JS de yaddas 2 hissede olur. Heap ve stack
+
+  Sade (value types) stack da saxlanilir
+  Bu hisse sade ve suretli yadda saxlama ucundur ve ardicil olaraq yadda saxlanilirlar.
+
+  Heap ise daha boyuk ,komplex tipleri saxlamaq ucundur. 
+  burds ardicilliq yoxdur, harda olsa melumatlar istenilen  formada saxlanila biler.
+  heap de melumatlar referanslar ile stack deki deyiskenlere baglanir.
+    
+    Qeyd:stack deki deyiskenler birbasa deyerleri saxlayir.
+    heap deki deyiskenler ise referanslari saxlayir.
+
+
+----------------------------------------------
+
+Question 3
+hansı tipdə funksiyalar tanıyırsınız,kod nümunələri ilə göstərin.
+1. Function Declaration
+2. Function Expression
+3. Arrow Function
+4. Anonymous Function
+
+1. Function Declaration
+//function acar sozu + funksiyanin adi  
+function test() {
+  console.log("Hello, World!");
+}
+
+test();
+
+
+2. Function Expression
+string Expression,number Expression,boolean Expression, object Expression, array Expression, function Expression novleri var.
+
+let sum = function(a, b) {
+  return a + b;
+};
+console.log(sum(3, 4)); 
+//funksiyanin adi yoxdur, deyisene menimsedirik
+//funksiyanin adi olsa da olur, amma deyisene menimsediyi ucun adi ile cagirmaq olmaz
+
+3. Anonymous Function
+//Adi olmayan funksiyadir ve geriye hecne qaytarmir
+setTimeout(function() {
+  console.log("This is an anonymous function");
+}, 2000);
+ eger return yoxdursa bu adsizdir, funksiya sadece bir deyisene menimsedilib.
+
+4. Arrow Function
+//ES6 ile gelen yeni funksiyadir
+//function sozunden istifade etmirik
+//eger tek setirlikse return  siline biler
+
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4)); 
+
+//eger tek setirlik deyilse return yazilmalidir
+const multiply2 = (a, b) => {
+  return a * b;
+};  
+console.log(multiply2(3, 4));
+
+
+
+
+----------------------------------------------
+Question 4
+obyektlərin kopyalanmağı barəsində danışın.
+obyektler reference type oldugu ucun onlar birbasa deyer saxlamirlar, yaddasda referans saxlayirlar.
+buna gorede bir obyektin deyisiklikleri digerine tesir edir.
+reference type ve value type copy etmek haqda:
+1. Reference Type Copy
+let obj1 = { name: "Alice", age: 25 };
+let obj2 = obj1;
+obj2.age = 30;
+console.log(obj1.age); // 30 cunki obj2 obj1 in referansini goturub ve hemin obyektin ozunde deyisiklik edib.
+2. Value Type Copy
+let num1 = 10;
+let num2 = num1; 
+num2 = 20;
+console.log(num1); // 10, cunki num2 num1 in deyerini goturub
+
+
+----------------------------------------------
+Question 5
+rest və spread izah edin və kod nümunələri göstərin
+Rest ve Spread operatorlari her ikisi uc noqte ile  ... gosterilirler.
+1. Rest Operator
+//funksiyaya gonderilen arqumentlerin sayi melum deyilse rest operatorundan istifade edirik
+const x=() =>{
+  console.log(list);
+}
+x(1,2,3,4,5);
+//funksiyaya gonderilen butun arqumentler list adli arrayde toplanir
+//rest operatoru funksiyanin sonuncu arqumenti olmalidir
+const sum = (...numbers) => {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+};
+console.log(sum(1, 2, 3, 4)); // 10
+//funksiyaya gonderilen butun arqumentler numbers adli arrayde toplanir
+2. Spread Operator
+//arraydaki ve ya obyektin elementlerini ayirmaq ucun istifade olunur
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];
+console.log(arr2); // [1, 2, 3, 4, 5]
+//arr1 in butun elementleri arr2 ye kopyalanir ve 4,5 elave olunur
+let obj1 = { a: 1, b: 2 };
+let obj2 = { ...obj1, c: 3 };
+console.log(obj2); // { a: 1, b: 2, c: 3 }
+//obj1 in butun elementleri obj2 ye kopyalanir ve c:3 elave olunur
+
+
+math max ve min misali
+let numbers = [3, 15, 1, 7];
+let max = Math.max(...numbers); // Spread operatoru ile array elementlerini ayiririq
+let min = Math.min(...numbers);
+console.log("Max:", max); //  15
+console.log("Min:", min); // 1
+
+math max apply misali
+let numbers = [3, 15, 1, 7];
+let max = Math.max.apply(null, numbers); // apply ile array elementlerini ayiririq
+let min = Math.min.apply(null, numbers);
+console.log("Max:", max); // 15
+console.log("Min:", min); //  1
+
+Qeyd: apply metodu ile funksiyaya array kimi arqument gonderirik, 
+math max ise  bizden string arqumentler gozumleyir.
+buna gorede apply metodu ile array elementlerini ayirmaq olur.
+----------------------------------------------
+
+
+
+
