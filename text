@@ -1,6 +1,4 @@
-----------------------------------------------
-Question 1
-
+--------------------------------------------Question 1-----------------------------------------------
 Data types. haqda  danışmaq 
 a.primitive , non primitive
 b.value, reference 
@@ -25,7 +23,7 @@ Data types---
 
 
 
-----------------------------------------------
+----------------------------------------Question 2------------------------------------------------------
 Question 2
   value və reference type-lar yaddaşda saxlanmağına görə necə işləyir?. 
   heap və stack mövzusunu izah edin
@@ -43,10 +41,8 @@ Question 2
     heap deki deyiskenler ise referanslari saxlayir.
 
 
-----------------------------------------------
-
-Question 3
-hansı tipdə funksiyalar tanıyırsınız,kod nümunələri ilə göstərin.
+-------------------------------------------Question 3---------------------------------------------------
+Hansı tipdə funksiyalar tanıyırsınız,kod nümunələri ilə göstərin.
 1. Function Declaration
 2. Function Expression
 3. Arrow Function
@@ -95,8 +91,8 @@ console.log(multiply2(3, 4));
 
 
 
-----------------------------------------------
-Question 4
+------------------------------------------------------Question 4------------------------------------------
+
 obyektlərin kopyalanmağı barəsində danışın.
 obyektler reference type oldugu ucun onlar birbasa deyer saxlamirlar, yaddasda referans saxlayirlar.
 buna gorede bir obyektin deyisiklikleri digerine tesir edir.
@@ -113,8 +109,8 @@ num2 = 20;
 console.log(num1); // 10, cunki num2 num1 in deyerini goturub
 
 
-----------------------------------------------
-Question 5
+-----------------------------------------Question 5----------------------------------------------------
+
 rest və spread izah edin və kod nümunələri göstərin
 Rest ve Spread operatorlari her ikisi uc noqte ile  ... gosterilirler.
 1. Rest Operator
@@ -159,7 +155,7 @@ console.log("Min:", min); //  1
 Qeyd: apply metodu ile funksiyaya array kimi arqument gonderirik, 
 math max ise  bizden string arqumentler gozumleyir.
 buna gorede apply metodu ile array elementlerini ayirmaq olur.
-----------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 
 
